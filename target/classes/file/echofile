@@ -1,0 +1,111 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#", 
+	"title": "Root", 
+	"type": "object",
+	"required": [
+		"args",
+		"headers",
+		"url"
+	],
+	"properties": {
+		"args": {
+			"title": "Args", 
+			"type": "object",
+			"required": [
+			],
+			"properties": {
+			}
+		}
+,
+		"headers": {
+			"title": "Headers", 
+			"type": "object",
+			"required": [
+				"x-forwarded-proto",
+				"x-forwarded-port",
+				"host",
+				"x-amzn-trace-id",
+				"accept",
+				"user-agent",
+				"accept-encoding"
+			],
+			"properties": {
+				"x-forwarded-proto": {
+					"title": "X-forwarded-proto", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"https"
+					],
+					"pattern": "^.*$"
+				},
+				"x-forwarded-port": {
+					"title": "X-forwarded-port", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"443"
+					],
+					"pattern": "^.*$"
+				},
+				"host": {
+					"title": "Host", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"postman-echo.com"
+					],
+					"pattern": "^.*$"
+				},
+				"x-amzn-trace-id": {
+					"title": "X-amzn-trace-id", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Root=1-62ce7002-3739e4f229d9f9bd17754fae"
+					],
+					"pattern": "^.*$"
+				},
+				"accept": {
+		
+					"title": "Accept", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"*/*"
+					],
+					"pattern": "^.*$"
+				},
+				"user-agent": {
+					"title": "User-agent", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Apache-HttpClient/4.5.13 (Java/17.0.2)"
+					],
+					"pattern": "^.*$"
+				},
+				"accept-encoding": {
+					"title": "Accept-encoding", 
+					"type": "string",
+					"default": "",
+					"examples": [
+						"gzip,deflate"
+					],
+					"pattern": "^.*$"
+				}
+			}
+		}
+,
+		"url": {
+			"title": "Url", 
+			"type": "string",
+			"default": "",
+			"examples": [
+				"https://postman-echo.com/get"
+			],
+			"pattern": "^.*$"
+		}
+	}
+}
